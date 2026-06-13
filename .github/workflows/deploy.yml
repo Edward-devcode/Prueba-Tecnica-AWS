@@ -58,7 +58,11 @@ jobs:
 
       - name: Terraform Plan
         working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
-        run: terraform plan
+        run: |
+          pwd
+          ls -la
+          cat terraform.tfvars
+          terraform plan -input=false
 
       - name: Terraform Apply
         working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
