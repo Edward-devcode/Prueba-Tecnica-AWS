@@ -13,3 +13,5 @@ package_file = "../../lambda/function.zip"
 db_host = "staging-db.internal"
 
 redis_host = "staging-redis.internal"
+
+aws_region = "us-east-1"

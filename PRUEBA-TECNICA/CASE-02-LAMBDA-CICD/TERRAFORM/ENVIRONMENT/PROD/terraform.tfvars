@@ -13,3 +13,5 @@ package_file = "../../lambda/function.zip"
 db_host = "prod-db.internal"
 
 redis_host = "prod-redis.internal"
+
+aws_region = "us-east-1"
