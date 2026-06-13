@@ -90,3 +90,13 @@ terraform apply
 
 
 
+#flujo cicd
+-se hace push a entorno específico (dev, staging, prod)
+-se ejecuta workflow de github actions
+-se autentica con OIDC y asume rol con permisos mínimos
+-empacaqueta la función Lambda 
+-se ejecuta init, plan y apply de Terraform para desplegar la función y actualizar alias
+-si el despliegue falla, se puede hacer rollback actualizando el alias a la versión anterior
+-si el despliegue es exitoso, el alias apunta a la nueva versión 
+
+
