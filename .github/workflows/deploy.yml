@@ -49,17 +49,17 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
+        working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
         run: terraform init
 
       - name: Terraform Validate
-        working-directory: TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
+        working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
+        working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
+        working-directory: PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/ENVIRONMENT/${{ env.TF_ENV }}
         run: terraform apply -auto-approve
