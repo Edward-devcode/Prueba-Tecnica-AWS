@@ -42,7 +42,7 @@ jobs:
 
       - name: Package Lambda
         run: |
-          cd lambda
+          cd PRUEBA-TECNICA/CASE-02-LAMBDA-CICD/TERRAFORM/lambda
           zip -r function.zip lambda_function.py
 
       - name: Setup Terraform
