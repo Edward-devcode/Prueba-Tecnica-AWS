@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "Lambda deployed successfully",
+            "message": "Lambda deployed successfully 2.0 with CI/CD!",
             "db_host": db_host,
             "redis_host": redis_host
         })
