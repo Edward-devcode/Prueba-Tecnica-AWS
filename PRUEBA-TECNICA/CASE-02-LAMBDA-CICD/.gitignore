@@ -1,4 +1,4 @@
-*.tfvars
+
 **.DS_Store
 *.tfstate
 *.tfstate.backup
