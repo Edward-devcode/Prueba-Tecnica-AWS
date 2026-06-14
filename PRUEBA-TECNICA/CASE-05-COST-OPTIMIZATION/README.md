@@ -26,9 +26,12 @@ S3 standard -> S3 IA o Glacier para datos que no se acceden con frecuencia. -> G
 - Identificar objetos no utilizados o duplicados que puedan eliminarse.
 - Analizar si el S3 necesita versionado activado, lo que puede aumentar los costos.
 
-# CloudFront: Evaluar el uso de CloudFront y considerar alternativas como Amazon S3 Transfer Acceleration o AWS Global Accelerator si el tráfico es principalmente interno o regional.
-analizar costos de transferencia de datos y considerar optimizaciones como reducir el número de solicitudes o usar compresión para reducir el tamaño de los objetos entregados.
+# CloudFront: 
+-Evaluar el uso de CloudFront y considerar alternativas como Amazon S3 Transfer Acceleration o AWS Global Accelerator si el tráfico es principalmente interno o regional.
+- Analizar costos de transferencia de datos y considerar optimizaciones como reducir el número de solicitudes o usar compresión para reducir el tamaño de los objetos entregados.
 - Analizar cache Hit Ratio para identificar oportunidades de mejorar la caché y reducir las solicitudes a los orígenes, lo que puede reducir costos.
 - Cambiar TTL de CloudFront para reducir la frecuencia de las solicitudes a los orígenes, lo que puede reducir costos.
 - Cambiar cache policies para optimizar la caché para evitar solicitudes innecesarias a los orígenes, lo que puede reducir costos.
 
+# Crear AWS Budgets:
+Para monitorear los costos y establecer alertas para detectar cualquier aumento inesperado en los costos crear AWS Budgets para EC2, RDS, S3 y CloudFront. Esto permitirá recibir notificaciones cuando los costos se acerquen o superen los límites establecidos, facilitando la identificación de áreas que requieren atención, usando SNS para recibir alertas por correo electrónico o SMS.
