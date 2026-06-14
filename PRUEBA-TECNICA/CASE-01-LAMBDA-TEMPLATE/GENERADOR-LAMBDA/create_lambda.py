@@ -20,8 +20,8 @@ def main():
         sys.exit(1)
 
     target_path.mkdir()
-    print("Template:", template_path)
-    print("Target:", target_file)
+    print("Template:", template_path) #Mostramos la ruta de la plantilla para verificar que es correcta. Esto es útil para depuración y asegurarnos de que estamos copiando el archivo correcto.
+    print("Target:", target_file) #Mostramos la ruta de destino para verificar que es correcta. Esto es útil para depuración y asegurarnos de que estamos copiando el archivo al lugar correcto.
     shutil.copy(template_path, target_file) # Copiamos el archivo de la plantilla a la nueva ubicación, creando así la estructura básica de la Lambda.
 
     print(f"Lambda '{lambda_name}' creada correctamente.")
