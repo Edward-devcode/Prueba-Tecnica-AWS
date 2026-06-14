@@ -1,0 +1,13 @@
+**.DS_Store
+*.tfstate
+*.tfstate.backup
+*.tfsate.*
+.terraform/
+.terraform.lock.hcl
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.tfvarscat
+funtion.zip
+*.zip

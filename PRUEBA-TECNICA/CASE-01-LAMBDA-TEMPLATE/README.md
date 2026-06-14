@@ -44,7 +44,7 @@ def lambda_handler(event, context):   # Función principal que AWS Lambda invoca
  cd CASE-01-LAMBDA-TEMPLATE/DOCUMENTACION/DIAGRAMA
  cd GENERADOR-LAMBDA
 
-BASH para ejecutar el generador de Lambda:
+BASH para ejecutar el generador de Lambda dirigete a la carpeta GENERADOR-LAMBDA y ejecuta el siguiente comando, reemplazando NOMBRE_DE_LA_LAMBDA por el nombre que deseas darle a tu nueva función Lambda:
 python create_lambda.py  NOMBRE_DE_LA_LAMBDA
 
 
