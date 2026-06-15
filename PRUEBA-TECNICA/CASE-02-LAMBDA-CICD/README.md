@@ -110,7 +110,11 @@ terraform apply
 
 
 6. Uso de OIDC le permite al pipeline tener credenciales temporaltes STS de AWS, de esta forma evito uso de credenciales estaticas en 
-7. Uso de alianses y versiones para rollback automatico: 
+7. Uso de alianses y versiones para rollback automatico: se implementa publish = true   permite generar versiones inmutables en cada despliegue y 
+  source_code_hash = filebase64sha256(var.package_file) permite que la función se actualice si el codigo original cambia. Despues use alianses en este caso dev, prod y staging que permite apuntar a cada ambiente a una versión especifica del lambda. Si alguna version falla en produccion este mecanismo te permite actualizar el alias para que apunte a una version anterior estable.
+
+  
+
 
 
 
