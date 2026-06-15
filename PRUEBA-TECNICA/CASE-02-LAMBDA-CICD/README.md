@@ -64,11 +64,19 @@ Guía para habilitar pipelines con GitHub Actions y gestionar despliegues de fun
 
 ## Ejemplo de despliegue rápido (comandos)
 ```bash
-# Inicializar Terraform en el ambiente DEV
+# Inicializar Terraform 
+INICIALIAR BOOTSTRAP 
+cd TERRAFORM/BOOTSTRAP
+terraform init
+terraform plan 
+terraform apply
+
 cd TERRAFORM/ENVIROMENT/DEV
 terraform init
 terraform plan 
 terraform apply 
+
+
 
 ## Ejemplo de implementación de Lambda (resumen)
 - Archivo: `templates/lambda_function.py` contiene `lambda_handler`.
@@ -88,8 +96,6 @@ terraform apply
 - OIDC + GitHub Actions: documentación oficial de GitHub y AWS IAM OIDC.
 - Terraform backend S3 + DynamoDB: docs de Terraform.
 
-
-
 #flujo cicd
 -se hace push a entorno específico (dev, staging, prod)
 -se ejecuta workflow de github actions
@@ -98,5 +104,7 @@ terraform apply
 -se ejecuta init, plan y apply de Terraform para desplegar la función y actualizar alias
 -si el despliegue falla, se puede hacer rollback actualizando el alias a la versión anterior
 -si el despliegue es exitoso, el alias apunta a la nueva versión 
+
+
 
 
