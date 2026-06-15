@@ -7,10 +7,11 @@ Crear un template (Terraform o CloudFormation) que despliegue:
 permisos IAM necesarios
 El objetivo de esta solicitud es crear la infraestructura necesaria para un webhook que necesita dar respuesta enmenos de 2 segundos, pero el procesamiento de la información recibida se realice de forma asíncrona ya que paraprocesar los datos se requiere al menos 17 segundos, se debe tener histórico de ejecuciones y mostrar métodos demonitoreo para el correcto uso.
 
+
   WEBHOOK
-     |
+     |  =GET/ USER / PUT / DELETE
 API GATEWAY
-     |
+     |   = POST 
 LAMBDA RECEIVER (RECIBE EL WEBHOOK, VALIDA QUE EL JSON SEA VALIDO, LO ENVIA A SQS Y RESPONDE STATUS DE ENVIO)
      |
     SQS => SQS DLQ  
