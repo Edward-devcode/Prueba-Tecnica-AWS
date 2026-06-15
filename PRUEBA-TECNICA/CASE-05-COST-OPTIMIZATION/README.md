@@ -27,7 +27,7 @@ S3 standard -> S3 IA o Glacier para datos que no se acceden con frecuencia. -> G
 - Analizar si el S3 necesita versionado activado, lo que puede aumentar los costos.
 
 # CloudFront: 
--Evaluar el uso de CloudFront y considerar alternativas como Amazon S3 Transfer Acceleration o AWS Global Accelerator si el tráfico es principalmente interno o regional.
+-Evaluar el uso de CloudFront y considerar alternativas como Amazon S3 Transfer Acceleration o AWS Global Accelerator(ENVIA INFOR A EDGE LOCATION Y DESPUES A    RED LOCAL DE AWS SIN PASAR POR INTENET PUBLICA) si el tráfico es principalmente interno o regional.
 - Analizar costos de transferencia de datos y considerar optimizaciones como reducir el número de solicitudes o usar compresión para reducir el tamaño de los objetos entregados.
 - Analizar cache Hit Ratio para identificar oportunidades de mejorar la caché y reducir las solicitudes a los orígenes, lo que puede reducir costos.
 - Cambiar TTL de CloudFront para reducir la frecuencia de las solicitudes a los orígenes, lo que puede reducir costos.
