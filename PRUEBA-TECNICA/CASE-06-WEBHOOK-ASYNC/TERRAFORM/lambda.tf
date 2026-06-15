@@ -44,7 +44,7 @@ resource "aws_lambda_function" "processor" {
   }
 }
 
-#CONECTAR SQS CON LAMBDA QUE PROCESA CADA QUE SQS TENGA MENSAJE ESTE INVOCA A LAMBDA
+#CONECTAR SQS CON LAMBDA QUE PROCESA CADA QUE SQS TENGA MENSAJE ESTE INVOCA A LAMBDA PROCESSOR
 resource "aws_lambda_event_source_mapping" "processor_sqs_trigger" {
   event_source_arn = aws_sqs_queue.webhook_queue.arn
   function_name    = aws_lambda_function.processor.arn

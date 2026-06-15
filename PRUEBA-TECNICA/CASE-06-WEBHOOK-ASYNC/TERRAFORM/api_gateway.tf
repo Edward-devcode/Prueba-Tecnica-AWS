@@ -17,7 +17,7 @@ resource "aws_apigatewayv2_integration" "receiver_integration" {
 #CREAR RUTA PUBLICA  DEL WEBHOOK
 resource "aws_apigatewayv2_route" "webhook_route" {
   api_id    = aws_apigatewayv2_api.webhook_api.id
-  route_key = "POST /webhook"                                                        # DEFINES ENDPOINT
+  route_key = "POST /webhook"                                                        # DEFINES ENDPOINT <METODO_HTTP><RUTA>
   target    = "integrations/${aws_apigatewayv2_integration.receiver_integration.id}" # SI ALGUIEN INVOCA POST /webhook  APIGATEWAY USA INTEGRACION DEL RECEIVER
 }
 
