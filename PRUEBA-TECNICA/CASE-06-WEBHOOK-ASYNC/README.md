@@ -32,3 +32,4 @@ LAMBDA PROCESSOR (CONSUME EL MENSAJE DE SQS, LLAMA API EXTERNA, TRANFORMA LOS DA
   El tradeoff es que DynamoDB sacrifica capacidades relacionales y flexibilidad que de consultas que RDS tiene a cambio de mayor escalabilidad y simplicidad operacional.
 
   Si lambda Processor falla
+  
